@@ -1,0 +1,118 @@
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Inter:wght@300&display=swap');
+
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Inter"
+}
+
+h1{
+    display:flex;
+    justify-content:center;
+    margin:5rem
+}
+
+
+
+form{
+    display:flex;
+    align-items:center;
+    gap:2rem;
+    margin:auto;
+    justify-content:center;
+}
+
+form input{
+     height:3rem;
+     padding:1rem;
+     border:1px solid black;
+     border-radius:20px;
+
+}
+
+
+.input-btn{
+    background:black;
+    color:white;
+    border:none;
+    height:3rem;
+    width:5rem;
+    padding:1rem;
+    align-items:center;
+}
+input:hover{
+    border:1px solid gray;
+    transform:scale(1.1)
+}
+.input-btn:hover{
+    background:gray;
+    color:white;
+    border:none;
+    height:3rem;
+    width:5rem;
+    padding:1rem;
+    align-items:center;
+    transform:scale(1.1)
+}
+
+li{ 
+    margin:3rem;
+    padding:1rem;
+    border:1px solid black;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#EEEEEE;
+    border-radius:10px;
+    border:none; 
+    font-family:"Inter"
+}
+
+li:hover{ 
+  transform:scale(1.03)
+}
+
+ h2{
+
+   font-weight:300;
+   color:black;
+   font-size:1.5rem;
+  
+
+
+ }
+div{
+    display:flex;
+   gap:0.9rem;
+    align-items:center;
+   
+}
+
+
+div input{
+    height:1.5rem;
+    width:2rem;
+    
+}
+
+
+div button{
+    background:black;
+    color:white;
+    border:none;
+    padding:0.5rem;
+    margin:2px;
+}
+
+div button:hover{
+    background:white;
+    color:black;
+    border:none;
+    padding:0.5rem;
+    margin:2px;
+    transform:scale(1.1)
+}
