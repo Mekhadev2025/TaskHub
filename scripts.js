@@ -1,5 +1,5 @@
  
-
+const array=[]
 const form=document.querySelector("form");
 const ul=document.querySelector("ul");
 
@@ -36,15 +36,29 @@ console.log("hurray")
 label.innerText=`Task Status: ${status}`
 li.style.backgroundColor="#DBDFEA"
 del_btn.style.backgroundColor="#8294C4"
+data.vstatus=status
+console.log(array);
 }
 else{
     status="Pending"
     label.innerText=`Task Status: ${status}`
     li.style.backgroundColor="#EEEEEE"
     del_btn.style.backgroundColor="black"
-
+    data.vstatus=status
+    console.log(array);
 }
 })
+
+const data ={
+    task:dvalue,
+    vstatus:status,
+    id:Date.now()
+
+}
+array.push(data);
+console.log(array);
+
+
 
 del_btn.addEventListener("click",()=>{
     console.log("deleting container")
@@ -56,9 +70,6 @@ inp.value=''
 
 
 })
-
-
-
 
 
 
