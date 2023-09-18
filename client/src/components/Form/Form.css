@@ -1,0 +1,39 @@
+
+.todoInput-form{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-top:3rem;
+    gap:2rem;
+  
+  }
+  .todoInput{
+    height:3rem;
+    padding:1rem;
+    border:1px solid black;
+    border-radius:20px;
+  
+  }
+  
+  
+  .input-btn{
+    background:black;
+    color:white;
+    border:none;
+    height:3rem;
+    width:5rem;
+    padding:1rem;
+    align-items:center;
+  }
+  
+  .input-btn:hover{
+    background:gray;
+    color:white;
+    border:none;
+    height:3rem;
+    width:5rem;
+    padding:1rem;
+    align-items:center;
+   
+  }
+  
