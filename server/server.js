@@ -7,42 +7,49 @@ dotenv.config();
 app.use(express.json());
 app.use(cors());
 
-const mysql = require('mysql2');
+const mysql = require("mysql2");
 
 const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'mekha',
-  password: 'mekha1234',
-  database: 'TASKS',
+  host: "localhost",
+  user: "mekha",
+  password: "mekha1234",
+  database: "TASKS",
 });
 
 connection.connect((err) => {
   if (err) {
-    console.error('Error connecting to MySQL:', err);
+    console.error("Error connecting to MySQL:", err);
     return;
   }
-  console.log('Connected to MySQL database');
+  console.log("Connected to MySQL database");
 });
 
-connection.query("CREATE TABLE IF NOT EXISTS tasks (taskname VARCHAR(255),id INT AUTO_INCREMENT PRIMARY KEY);", (error, results, fields) => {
-  if (error) {
-    console.error('Error querying the database:', error);
-    return;
+connection.query(
+  "CREATE TABLE IF NOT EXISTS tasks (taskname VARCHAR(255),id INT AUTO_INCREMENT PRIMARY KEY);",
+  (error, results, fields) => {
+    if (error) {
+      console.error("Error querying the database:", error);
+      return;
+    }
+    console.log("Query results:", results);
   }
-  console.log('Query results:', results);
-});
+);
 
 app.post("/add", (req, res) => {
   const taskName = req.body.taskName; // Use req.body to access POST request data
-    
-  connection.query("INSERT INTO tasks (taskname) VALUES (?)", [taskName], (error, results, fields) => {
-    if (error) {
-      console.error('Error querying the database:', error);
-      return;
+
+  connection.query(
+    "INSERT INTO tasks (taskname) VALUES (?)",
+    [taskName],
+    (error, results, fields) => {
+      if (error) {
+        console.error("Error querying the database:", error);
+        return;
+      }
+      // Handle the query results here
+      console.log("Query results:", results);
     }
-    // Handle the query results here
-    console.log('Query results:', results);
-  });
+  );
 });
 
 app.get("/add", (req, res) => {
