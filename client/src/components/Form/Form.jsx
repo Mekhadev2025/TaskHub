@@ -20,7 +20,6 @@ const Form = (props) => {
       });
       setTask("")
 
-      
   };
 
   return (
