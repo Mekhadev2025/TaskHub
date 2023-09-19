@@ -1,28 +1,19 @@
-import React, { useState, useEffect } from "react";
-import Form from "./components/Form/Form";
-import Card from "./components/Card/Card"; // Corrected import
+import React, { useState } from "react";
+import SignIn from "../src/Pages/SignIn/SignIn"
+import Main from "../src/Pages/Main/Main"
 import "./App.css";
-
+import Navbar from "./components/Navbar/Navbar";
 const App = () => {
-  const [data, setData] = useState([]);
-
-  const updateData = (newItem) => {
-    setData((prevData) => {
-      console.log("data is", [...prevData, newItem]);
-      return [...prevData, newItem];
-    });
-  };
-
+   const [signed,useSigned]=useState(false)
   return (
     <>
-      <h1 className="todo-title">Task-Hub</h1>
-      <Form data={data} updateData={updateData} />
+    <Navbar/>
+      <h1 className="todo-title">Welcome to TaskHub!!!!</h1>
       {
-        data.map((item) => (
-          // Use parentheses to wrap the Card component
-          <Card key={item} taskName={item} />
-        ))
+        signed ? <Main/> : <SignIn/>
       }
+      
+     
     </>
   );
 };

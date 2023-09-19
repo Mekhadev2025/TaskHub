@@ -1,0 +1,79 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+.loginHeader{
+    color: #293656;
+font-family: Inter;
+font-size: 2rem;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+text-align:center;
+ padding:1rem;
+}
+.signCont{
+    background: #F5F8FE;
+box-shadow: 1px 4px 15px 0px rgba(0, 0, 0, 0.25);
+width:31rem;
+height:33rem;
+ 
+
+margin:auto;
+margin-top:3rem;
+}
+.loginForm{
+    display:flex;
+flex-direction:column;
+
+
+}
+.inputLog{
+    border-radius: 0.1875rem;
+border: 2px solid #BFC5D4;
+background: #F4F6FB;
+width: 24.625rem;
+height: 3.125rem;
+margin:auto;
+}
+.btn-group{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+.label{
+    color: #293656;
+    font-family: Inter;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left:3.27rem;
+}
+.pwdlabel,.userlabel{
+    margin-top:2rem;
+    margin-bottom:0.81rem;
+}
+.loginBtn{
+    background: #293656;
+    width: 9.375rem;
+height: 2.4375rem;
+border:none;
+margin-left:3.27rem;
+color:white;
+margin-top:2.62rem;
+color: #FFF;
+font-family: Inter;
+font-size: 1.25rem;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.register{
+    margin-top:2.62rem;
+    margin-right:3rem;
+    color: #293656;
+font-family: Inter;
+font-size: 1.25rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
