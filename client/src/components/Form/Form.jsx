@@ -11,12 +11,12 @@ const Form = (props) => {
     axios
       .post("http://localhost:5000/add", { taskName }) // Send taskName as an object
       .then((response) => {
-        // Fix the .then block
+
         console.log("Response:", response.data);
         props.updateData(taskName);
       })
       .catch((error) => {
-        // Handle errors in the .catch block
+
         console.error("Error:", error);
       });
       props.updateData(taskName)
