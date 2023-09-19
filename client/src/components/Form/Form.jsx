@@ -19,6 +19,7 @@ const Form = (props) => {
         // Handle errors in the .catch block
         console.error("Error:", error);
       });
+      props.updateData(taskName)
     setTask("");
   };
 
